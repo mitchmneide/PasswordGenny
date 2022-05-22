@@ -11,8 +11,9 @@ var numbCase= "0123456789";
 var symbolCase =  "~!#@$%^&*?+-=<>";
 var passGen = "";
 
-
+// main function to create the password
 function generatePassword () {
+  // prompt for password length
 var passLength = prompt("Between 8-128 characters how many charcters would you like to have?");
 
 if (passLength < 8 || passLength > 128|| isNaN(parseInt(passLength)))  {
@@ -20,6 +21,7 @@ if (passLength < 8 || passLength > 128|| isNaN(parseInt(passLength)))  {
   defaultPrevented();
   return passLength;
 };
+// prompts for password criteria 
 var lowerPrompt = confirm('Would you like your password to have lower case letter?');
 var upperPrompt = confirm('Would you like to have upper case letters?');
 var numberPrompt = confirm('Would you like to include numbers?');
